@@ -10,3 +10,10 @@ function myFunction(x) {
     menu.classList.add('after-click');
 }
 
+$(document).ready(function(){
+    $('.toggle').click(function(){
+        $('.toggle').toggleClass('active');
+        $('.overlay').toggleClass('active');
+        $('.navbar').toggleClass('active');
+    });
+});
