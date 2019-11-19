@@ -269,25 +269,6 @@ a {
   cursor: pointer;
 }
 
-.btn {
-  width: 200px;
-  height: 60px;
-  font-size: 20px;
-  margin-left: 10px;
-  margin-right: 15px;
-  border-radius: 30px;
-  background-color: rgb(80, 77, 77);
-  border-width: 0px;
-	text-decoration: none;
-  color: #fff;
-}
-
-.btn:hover {
-  background-color: #fd3301;
-  transition: 0.3s;
-  cursor: pointer;
-}
-
 /* Footer */
 .footer {
   background-color: #fd3301;
@@ -374,4 +355,60 @@ a {
 
 .show {
   display: block;
+}
+/**
+ * Simple fade transition,
+ */
+ .mfp-fade.mfp-bg {
+	opacity: 0;
+	-webkit-transition: all 0.15s ease-out; 
+	-moz-transition: all 0.15s ease-out; 
+	transition: all 0.15s ease-out;
+}
+.mfp-fade.mfp-bg.mfp-ready {
+	opacity: 0.8;
+}
+.mfp-fade.mfp-bg.mfp-removing {
+	opacity: 0;
+}
+
+.mfp-fade.mfp-wrap .mfp-content {
+	opacity: 0;
+	-webkit-transition: all 0.15s ease-out; 
+	-moz-transition: all 0.15s ease-out; 
+	transition: all 0.15s ease-out;
+}
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+	opacity: 1;
+}
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+	opacity: 0;
+}
+.content {
+  position: relative;
+  max-width: 600px; /* Maximum width */
+  margin: 20px; /* Center it */
+}
+
+.content img {
+  width: 600px;
+  vertical-align: middle;
+}
+
+.content .card1 {
+  position: absolute;
+  bottom: 0px;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  width: 100%; /* Full width */
+  padding: 20px;
+}
+
+.content .card1 img{
+max-width: 600px;
+}
+
+.content .card1 p{
+  padding-top: 20px;
 }
