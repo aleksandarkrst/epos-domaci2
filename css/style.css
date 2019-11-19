@@ -424,68 +424,81 @@ ul {
 
 /* Loader */
 
-/* .loader-wrapper {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #242f3f;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-}
-
 .loader {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  position: relative;
-  border: 4px solid #Fff;
-  animation: loader 2s infinite ease;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
 }
 
-.loader-inner {
-  vertical-align: top;
-  display: inline-block;
-  width: 100%;
-  background-color: #fff;
-  animation: loader-inner 2s infinite ease-in;
+.loader.active {
+  display: none;
 }
 
-@keyframes loader {
+.load {
+  display: none;
+}
+
+.load.active {
+  display: block;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
   0% {
     transform: rotate(0deg);
   }
-  25% {
-    transform: rotate(180deg);
-  }
-  50% {
-    transform: rotate(180deg);
-  }
-  75% {
-    transform: rotate(360deg);
-  }
   100% {
     transform: rotate(360deg);
   }
 }
 
-@keyframes loader-inner {
-  0% {
-    height: 0%;
+/* Add animation to "page content" */
+
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from {
+    bottom: -100px;
+    opacity: 0
   }
-  25% {
-    height: 0%;
+  to {
+    bottom: 0px;
+    opacity: 1
   }
-  50% {
-    height: 100%;
+}
+
+@keyframes animatebottom {
+  from {
+    bottom: -100px;
+    opacity: 0
   }
-  75% {
-    height: 100%;
+  to {
+    bottom: 0;
+    opacity: 1
   }
-  100% {
-    height: 0%;
-  }
-} */
+}
