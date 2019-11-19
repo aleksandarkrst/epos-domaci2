@@ -36,6 +36,7 @@ a {
   height: 50px;
   cursor: pointer;
   z-index: 1;
+  background-color: #fff;
 }
 
 .toggle:before {
@@ -52,7 +53,7 @@ a {
 
 .toggle.active:before {
   transform: rotate(405deg);
-  background: #f7be16;
+  background: #fd3301;
   color: #000;
   z-index: 1;
 }
@@ -83,19 +84,20 @@ a {
 }
 
 .menu.active {
+  z-index: 1;
+  top: 15%;
   visibility: visible;
   position: fixed;
-  margin-top: 100px;
   transition-delay: 0.5s;
   animation: scale 1s;
 }
 
 @keyframes scale {
   0% {
-      transform: scaleY(0.8);
+    transform: scaleY(0.8);
   }
   100% {
-      transform: scaleY(1);
+    transform: scaleY(1);
   }
 }
 
@@ -123,7 +125,7 @@ a {
   left: -10px;
   width: 100%;
   height: 20px;
-  background: #f7be16;
+  background: #fd3301;
   z-index: -1;
   transform: scaleX(0);
   transform-origin: left;
@@ -134,45 +136,41 @@ a {
   transform: scaleX(1);
 }
 
-@media (max-width: 700px) {
+@media screen and (max-width: 700px) {
   .menu.active {
-      margin-top: 50px;
-      margin-left: 250px;
-      position: fixed;
+    margin-top: 50px;
+    margin-left: 250px;
+    position: fixed;
   }
-
   .menu ul li a {
-      position: relative;
-      text-decoration: none;
-      color: #fff;
-      font-size: 35px;
-      line-height: 100px;
-      text-shadow: 0px 2px 5px rgba(0, 0, 0, .5);
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    font-size: 35px;
+    line-height: 100px;
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, .5);
   }
-
   .toggle:before {
     line-height: 55px;
   }
 }
 
-@media (max-width: 570px) {
+@media screen and (max-width: 570px) {
   .menu.active {
-      margin-left: 100px;
-      position: fixed;
-      width: auto;
-      height: auto;
-      margin-top: 50px;
+    margin-left: 100px;
+    position: fixed;
+    width: auto;
+    height: auto;
+    margin-top: 50px;
   }
-
   .menu ul li a {
-      position: relative;
-      text-decoration: none;
-      color: #fff;
-      font-size: 30px;
-      line-height: 80px;
-      text-shadow: 0px 2px 5px rgba(0, 0, 0, .5);
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    font-size: 30px;
+    line-height: 80px;
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, .5);
   }
-
   .toggle:before {
     line-height: 55px;
   }
