@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 $(document).ready(function () {
   $('.toggle').click(function () {
     $('.toggle').toggleClass('active');
@@ -51,3 +52,5 @@ function popUp() {
     }
   });
 }
+=======
+>>>>>>> e2c65bee2d109199a716829a502576f30c1388e6
