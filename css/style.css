@@ -233,8 +233,9 @@ ul {
 
 /* Članci i epizode */
 .content {
-  margin: 20px 40px;
   text-align: center;
+  margin: 100px 250px;
+  width: 60%;
 }
 
 .content img {
@@ -262,7 +263,7 @@ ul {
 
 /* Call To Action */
 .call-to-action {
-  margin-top: 100px;
+  margin-top: 150px;
   text-align: center;
 }
 
