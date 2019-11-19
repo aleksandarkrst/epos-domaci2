@@ -1,11 +1,16 @@
-$(document).ready(function(){
-    $('.toggle').click(function(){
-        $('.toggle').toggleClass('active');
-        $('.overlay').toggleClass('active');
-        $('.navbar').toggleClass('active');
-    });
-    
+$(document).ready(function () {
+  $('.toggle').click(function () {
+    $('.toggle').toggleClass('active');
+    $('.overlay').toggleClass('active');
+    $('.navbar').toggleClass('active');
+  });
+
 });
+
+
+// Popup
+
+// Get the modal
 var modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
@@ -30,3 +35,16 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+$(function () {
+	$('.popup-modal').magnificPopup({
+		type: 'inline',
+		preloader: false,
+		focus: '#username',
+		modal: true
+	});
+	$(document).on('click', '.popup-modal-dismiss', function (e) {
+		e.preventDefault();
+		$.magnificPopup.close();
+	});
+});
