@@ -36,7 +36,6 @@ a {
   height: 50px;
   cursor: pointer;
   z-index: 1;
-  background-color: #fff;
 }
 
 .toggle:before {
@@ -53,7 +52,7 @@ a {
 
 .toggle.active:before {
   transform: rotate(405deg);
-  background: #fd3301;
+  background: #f7be16;
   color: #000;
   z-index: 1;
 }
@@ -84,20 +83,19 @@ a {
 }
 
 .menu.active {
-  z-index: 1;
-  top: 15%;
   visibility: visible;
   position: fixed;
+  margin-top: 100px;
   transition-delay: 0.5s;
   animation: scale 1s;
 }
 
 @keyframes scale {
   0% {
-    transform: scaleY(0.8);
+      transform: scaleY(0.8);
   }
   100% {
-    transform: scaleY(1);
+      transform: scaleY(1);
   }
 }
 
@@ -125,7 +123,7 @@ a {
   left: -10px;
   width: 100%;
   height: 20px;
-  background: #fd3301;
+  background: #f7be16;
   z-index: -1;
   transform: scaleX(0);
   transform-origin: left;
@@ -136,44 +134,65 @@ a {
   transform: scaleX(1);
 }
 
-@media screen and (max-width: 700px) {
+@media (max-width: 700px) {
   .menu.active {
-    margin-top: 50px;
-    margin-left: 250px;
-    position: fixed;
+      margin-top: 50px;
+      margin-left: 250px;
+      position: fixed;
   }
+
   .menu ul li a {
-    position: relative;
-    text-decoration: none;
-    color: #fff;
-    font-size: 35px;
-    line-height: 100px;
-    text-shadow: 0px 2px 5px rgba(0, 0, 0, .5);
+      position: relative;
+      text-decoration: none;
+      color: #fff;
+      font-size: 35px;
+      line-height: 100px;
+      text-shadow: 0px 2px 5px rgba(0, 0, 0, .5);
   }
+
   .toggle:before {
     line-height: 55px;
   }
 }
 
-@media screen and (max-width: 570px) {
+@media (max-width: 570px) {
   .menu.active {
-    margin-left: 100px;
-    position: fixed;
-    width: auto;
-    height: auto;
-    margin-top: 50px;
+      margin-left: 100px;
+      position: fixed;
+      width: auto;
+      height: auto;
+      margin-top: 50px;
   }
+
   .menu ul li a {
-    position: relative;
-    text-decoration: none;
-    color: #fff;
-    font-size: 30px;
-    line-height: 80px;
-    text-shadow: 0px 2px 5px rgba(0, 0, 0, .5);
+      position: relative;
+      text-decoration: none;
+      color: #fff;
+      font-size: 30px;
+      line-height: 80px;
+      text-shadow: 0px 2px 5px rgba(0, 0, 0, .5);
   }
+
   .toggle:before {
     line-height: 55px;
   }
+}
+
+/* Create two unequal columns that floats next to each other */
+
+/* Left column */
+
+.leftcolumn {
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
 }
 
 /* Fake image */
@@ -198,6 +217,56 @@ a {
   content: "";
   display: table;
   clear: both;
+}
+
+/* The Modal (background) */
+
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover, .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .btn {
@@ -306,47 +375,3 @@ a {
 .show {
   display: block;
 }
-<<<<<<< HEAD
-=======
-
-
-/* Popup */
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-}
-
-/* The Close Button */
-.close {
-  color: #aaa;
-  text-align: center;
-  font-size: 25px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
->>>>>>> 17c66f0cc4af612729c38b7f7a44b5bf620e5f55
