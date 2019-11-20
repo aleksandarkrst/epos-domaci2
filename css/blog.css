@@ -21,13 +21,10 @@ a {
 /* Header/Blog Title */
 
 .header {
-  height: 400px;
-  background-color: #fd3301;
-  padding: 100px;
-  margin-bottom: 100px;
+  font-size: 40px;
   text-align: center;
-  font-size: 6vw;
-  letter-spacing: 2px;
+  background: #fd3301;
+  padding: 100px 0;
 }
 
 .toggle {
@@ -38,7 +35,8 @@ a {
   width: 50px;
   height: 50px;
   cursor: pointer;
-  z-index: 1;
+  z-index: 1  ;
+  background-color: #fff;
 }
 
 .toggle:before {
@@ -55,9 +53,8 @@ a {
 
 .toggle.active:before {
   transform: rotate(405deg);
-  background: #f7be16;
+  background: #fd3301;
   color: #000;
-  z-index: 1;
 }
 
 .overlay {
@@ -70,6 +67,7 @@ a {
   transition: 0.5s;
   border-width: 0px;
   background-color: rgb(218, 218, 218);
+  /* z-index: 1; */
 }
 
 .overlay.active {
@@ -86,19 +84,20 @@ a {
 }
 
 .menu.active {
+  /* z-index: 1; */
+  top: 15%;
   visibility: visible;
   position: fixed;
-  margin-top: 100px;
   transition-delay: 0.5s;
   animation: scale 1s;
 }
 
 @keyframes scale {
   0% {
-      transform: scaleY(0.8);
+    transform: scaleY(0.8);
   }
   100% {
-      transform: scaleY(1);
+    transform: scaleY(1);
   }
 }
 
@@ -126,7 +125,7 @@ a {
   left: -10px;
   width: 100%;
   height: 20px;
-  background: #f7be16;
+  background: #fd3301;
   z-index: -1;
   transform: scaleX(0);
   transform-origin: left;
@@ -137,65 +136,44 @@ a {
   transform: scaleX(1);
 }
 
-@media (max-width: 700px) {
+@media screen and (max-width: 700px) {
   .menu.active {
-      margin-top: 50px;
-      margin-left: 250px;
-      position: fixed;
+    margin-top: 50px;
+    margin-left: 250px;
+    position: fixed;
   }
-
   .menu ul li a {
-      position: relative;
-      text-decoration: none;
-      color: #fff;
-      font-size: 35px;
-      line-height: 100px;
-      text-shadow: 0px 2px 5px rgba(0, 0, 0, .5);
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    font-size: 35px;
+    line-height: 100px;
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, .5);
   }
-
   .toggle:before {
     line-height: 55px;
   }
 }
 
-@media (max-width: 570px) {
+@media screen and (max-width: 570px) {
   .menu.active {
-      margin-left: 100px;
-      position: fixed;
-      width: auto;
-      height: auto;
-      margin-top: 50px;
+    margin-left: 100px;
+    position: fixed;
+    width: auto;
+    height: auto;
+    margin-top: 50px;
   }
-
   .menu ul li a {
-      position: relative;
-      text-decoration: none;
-      color: #fff;
-      font-size: 30px;
-      line-height: 80px;
-      text-shadow: 0px 2px 5px rgba(0, 0, 0, .5);
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    font-size: 30px;
+    line-height: 80px;
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, .5);
   }
-
   .toggle:before {
     line-height: 55px;
   }
-}
-
-/* Create two unequal columns that floats next to each other */
-
-/* Left column */
-
-.leftcolumn {
-  float: left;
-  width: 50%;
-}
-
-/* Right column */
-
-.rightcolumn {
-  float: left;
-  width: 25%;
-  padding-left: 20px;
 }
 
 /* Fake image */
@@ -209,36 +187,25 @@ a {
 /* Add a card effect for articles */
 
 .card {
+  /* position: fixed; */
+  right: 5%;
+  bottom: 10%;
+  width: 40%;
   background-color: white;
   padding: 20px;
-  margin-top: 20px;
+  
 }
 
 /* Clear floats after the columns */
+
+.row {
+  margin: 40px;
+}
 
 .row:after {
   content: "";
   display: table;
   clear: both;
-}
-
-.btn {
-  width: 200px;
-  height: 60px;
-  font-size: 20px;
-  margin-left: 10px;
-  margin-right: 15px;
-  border-radius: 30px;
-  background-color: rgb(80, 77, 77);
-  border-width: 0px;
-	text-decoration: none;
-  color: #fff;
-}
-
-.btn:hover {
-  background-color: #fd3301;
-  transition: 0.3s;
-  cursor: pointer;
 }
 
 /* Footer */
@@ -286,45 +253,43 @@ a {
   }
 }
 
-.dropbtn {
-  background-color: #3498DB;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-
-.dropbtn:hover, .dropbtn:focus {
-  background-color: #2980B9;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  overflow: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown a:hover {
-  background-color: #ddd;
-}
-
 .show {
   display: block;
+}
+
+.content {
+  position: relative;
+  max-width: 600px; /* Maximum width */
+  margin: 20px; /* Center it */
+}
+
+.content img {
+  width: 600px;
+  vertical-align: middle;
+}
+
+.content .card1 {
+  position: absolute;
+  bottom: 0px;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  width: 100%; /* Full width */
+  padding: 20px;
+}
+
+.content .card1 img{
+max-width: 600px;
+}
+
+.content .card1 p{
+  padding-top: 20px;
+}
+
+@media (max-width: 600px) {
+
+  .content {
+
+  }
+
 }

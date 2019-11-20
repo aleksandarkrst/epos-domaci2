@@ -190,7 +190,7 @@ ul {
 
 .column {
   float: left;
-  width: 40%;
+  width: 25%;
   padding: 0 10px;
   margin-bottom: 50px;
   margin-top: 150px;
@@ -200,7 +200,8 @@ ul {
 /* Gnjavila je druga 0, pravila visak na densoj strani  gore desno dole levo*/
 
 .row {
-  margin: 20px 20px 20px 350px;
+  align-content: center;
+  margin-left: 3%;
 }
 
 /* Clear floats after the columns */
@@ -292,6 +293,13 @@ h3 {
 .flip-card-front {
   background-color: #fff;
   color: black;
+  text-align: center;
+  padding-top: 35%;
+}
+
+.flip-card-front h2 {
+  /* align-content: center; */
+
 }
 
 .flip-card-back {
