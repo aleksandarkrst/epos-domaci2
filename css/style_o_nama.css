@@ -45,6 +45,7 @@ h1 {
   width: 50px;
   height: 50px;
   cursor: pointer;
+  background-color: #fff;
   z-index: 2;
 }
 
@@ -54,7 +55,7 @@ h1 {
   font-size: 50px;
   border-radius: 50%;
   text-align: center;
-  line-height: 55px;
+  line-height: 50px;
   width: 100%;
   height: 100%;
   transition: 0.5s;
@@ -62,9 +63,8 @@ h1 {
 
 .toggle.active:before {
   transform: rotate(405deg);
-  background: #f7be16;
+  background: #fd3301;
   color: #000;
-  z-index: 1;
 }
 
 .overlay {
@@ -77,7 +77,6 @@ h1 {
   transition: 0.5s;
   border-width: 0px;
   background-color: rgb(218, 218, 218);
-  
 }
 
 .overlay.active {
@@ -88,15 +87,14 @@ h1 {
 .menu {
   width: 100%;
   height: 100%;
-  margin-top: 0px;
-  margin-left: 500px;
   overflow: hidden;
   visibility: hidden;
-  z-index: 1;
 }
 
 .menu.active {
-  margin-top: 100px;
+  margin-top: 5%;
+  margin-left: 40%;
+  z-index: 2;
   visibility: visible;
   position: fixed;
   transition-delay: 0.5s;
@@ -105,10 +103,10 @@ h1 {
 
 @keyframes scale {
   0% {
-      transform: scaleY(0.8);
+    transform: scaleY(0.8);
   }
   100% {
-      transform: scaleY(1);
+    transform: scaleY(1);
   }
 }
 
@@ -124,8 +122,8 @@ h1 {
   position: relative;
   text-decoration: none;
   color: #fff;
-  font-size: 50px;
-  line-height: 100px;
+  font-size: 5vw;
+  line-height: 8vw;
   text-shadow: 0px 2px 5px rgba(0, 0, 0, .5);
 }
 
@@ -147,45 +145,41 @@ h1 {
   transform: scaleX(1);
 }
 
-@media (max-width: 700px) {
+@media screen and (max-width: 700px) {
   .menu.active {
-      margin-top: 50px;
-      margin-left: 250px;
-      position: fixed;
+    margin-top: 50px;
+    margin-left: 250px;
+    position: fixed;
   }
-
   .menu ul li a {
-      position: relative;
-      text-decoration: none;
-      color: #fff;
-      font-size: 35px;
-      line-height: 100px;
-      text-shadow: 0px 2px 5px rgba(0, 0, 0, .5);
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    font-size: 35px;
+    line-height: 100px;
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, .5);
   }
-
   .toggle:before {
     line-height: 55px;
   }
 }
 
-@media (max-width: 570px) {
+@media screen and (max-width: 570px) {
   .menu.active {
-      margin-left: 100px;
-      position: fixed;
-      width: auto;
-      height: auto;
-      margin-top: 50px;
+    margin-left: 100px;
+    position: fixed;
+    width: auto;
+    height: auto;
+    margin-top: 50px;
   }
-
   .menu ul li a {
-      position: relative;
-      text-decoration: none;
-      color: #fff;
-      font-size: 30px;
-      line-height: 80px;
-      text-shadow: 0px 2px 5px rgba(0, 0, 0, .5);
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    font-size: 30px;
+    line-height: 80px;
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, .5);
   }
-
   .toggle:before {
     line-height: 55px;
   }
@@ -193,6 +187,7 @@ h1 {
 
 /* TIMELINE
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
 .timeline ul {
   background-color: white;
   padding: 50px 0;
@@ -458,5 +453,24 @@ time {
     padding-left: 20px;
     padding-right: 30px;
   }
+}
 
+@media screen and (max-width: 370px) {
+  .main-header {
+    font-size: 3rem;
+  }
+
+  .main p {
+    font-size: 1rem;
+  }
+  
+  .pages-cta {
+    padding: 0px 6px;
+  }
+
+  .footer p {
+    position: relative;
+    bottom: 0;
+    margin: 0px;
+  }
 }
