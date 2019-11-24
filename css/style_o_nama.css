@@ -10,6 +10,8 @@ html {
 }
 
 
+
+
 /* Body je imao padding 50 zbog toga je gnjavio sa footerom */
 body {
   font: normal 16px/1.5 "Montserrat", sans-serif;
@@ -19,9 +21,19 @@ body {
 }  /* INTRO SECTION
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-.intro {
+/* .intro {
   background: #fd3301;
-  padding: 100px 0;
+  padding: 2% 0;
+  
+} */
+
+.intro {
+  height: 400px;
+  background-color: #fd3301;
+  padding: 100px;
+  margin-bottom: 100px;
+  text-align: center;
+  z-index: 2;
 }
 
 .container  {
@@ -33,6 +45,7 @@ body {
 
 h1 {
   font-size: 2.5rem;
+  color: white;
 }
 
 /* MENI--------------------------------------------- */
@@ -189,8 +202,20 @@ h1 {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .timeline ul {
-  background-color: white;
+  color:white;
   padding: 50px 0;
+}
+
+.timeline #bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+	
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 80%;
+  z-index: -1;
+  
 }
 
 .vrednosti .p {
@@ -204,9 +229,11 @@ h1 {
   width: 6px;
   margin: 0 auto;
   padding-top: 50px;
-  background: rgb(124, 121, 121);
+  background: rgb(255, 255, 255);
 
 }
+
+
 
 .timeline ul li::after {
   content: '';
@@ -267,6 +294,7 @@ time {
   font-weight: bold;
   margin-bottom: 8px;
 }
+
 
 
 /* EFFECTS
