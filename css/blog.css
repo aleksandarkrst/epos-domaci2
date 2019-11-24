@@ -27,6 +27,10 @@ a {
   padding: 100px 0;
 }
 
+.header h2 {
+  color: white;
+}
+
 .toggle {
   position: fixed;
   top: 20px;
@@ -135,60 +139,13 @@ a {
   transform: scaleX(1);
 }
 
-@media screen and (max-width: 700px) {
-  .menu.active {
-    margin-top: 50px;
-    margin-left: 250px;
-    position: fixed;
-  }
-  .menu ul li a {
-    position: relative;
-    text-decoration: none;
-    color: #fff;
-    font-size: 35px;
-    line-height: 100px;
-    text-shadow: 0px 2px 5px rgba(0, 0, 0, .5);
-  }
-  .toggle:before {
-    line-height: 55px;
-  }
-}
-
-@media screen and (max-width: 570px) {
-  .menu.active {
-    margin-left: 100px;
-    position: fixed;
-    width: auto;
-    height: auto;
-    margin-top: 50px;
-  }
-  .menu ul li a {
-    position: relative;
-    text-decoration: none;
-    color: #fff;
-    font-size: 30px;
-    line-height: 80px;
-    text-shadow: 0px 2px 5px rgba(0, 0, 0, .5);
-  }
-  .toggle:before {
-    line-height: 55px;
-  }
-}
-
-/* Fake image */
-
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
-}
-
 /* Add a card effect for articles */
 
 .card {
-  /* position: fixed; */
+  position: fixed;
+  float: right;
   right: 5%;
-  bottom: 10%;
+  bottom: 4%;
   width: 40%;
   background-color: white;
   padding: 20px;
@@ -263,7 +220,7 @@ a {
 }
 
 .content img {
-  width: 600px;
+  width: 100%;
   vertical-align: middle;
 }
 
@@ -277,27 +234,11 @@ a {
   padding: 20px;
 }
 
-.content .card1 img{
-max-width: 600px;
-}
-
-.content .card1 p{
-  padding-top: 20px;
-}
-
-@media (max-width: 600px) {
-
-  .content {
-
-  }
-
-}
-
 @media screen and (max-width: 370px) {
   .main-header {
     font-size: 3rem;
   }
-
+  
   .main p {
     font-size: 1rem;
   }
@@ -305,9 +246,234 @@ max-width: 600px;
   .pages-cta {
     padding: 0px 6px;
   }
-
+  
   .footer p {
     position: relative;
+    bottom: 0;
+    margin: 0px;
+  }
+  
+}
+* {
+  box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: absolute;
+  width: 500px;
+  right: 20px;
+  top: 370px;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  width: 50px;
+}
+.mySlides img{
+  width:500px;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+.content .card1 .p {
+  padding-top: 20px;
+  visibility: hidden;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+@media screen and (max-width: 850px) {
+  .menu.active {
+    margin-top: 50px;
+    margin-left: 250px;
+    position: fixed;
+  }
+  .menu ul li a {
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    font-size: 35px;
+    line-height: 100px;
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, .5);
+  }
+  .toggle:before {
+    line-height: 55px;
+  }
+  
+}
+
+@media screen and (max-width: 1024px){
+  .row {
+    align-content: center;
+    margin-left: 18%;
+  }
+  
+  .container {
+    position: relative;
+    align-content: center;
+    left: 15%;
+    width: 70%;
+    top: 20%;
+  }
+
+  .mySlides {
+    width: 100%;
+
+  }
+
+  .mySlides img{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menu.active {
+    position: fixed;
+    width: auto;
+    height: auto;
+  }
+  .menu ul li a {
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, .5);
+  }
+  .toggle:before {
+    line-height: 55px;
+  }
+  .footer {
+    text-align: center;
+    height: 170px;
+    margin-top: 20px;
+  }
+  .container {
+    position: relative;
+    align-content: center;
+    left: 12%;
+    width: 70%;
+    top: 20%;
+  }
+
+  .mySlides {
+    width: 100%;
+
+  }
+
+  .mySlides img{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .menu.active {
+    position: fixed;
+    width: auto;
+    height: auto;
+  }
+  .menu ul li a {
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, .5);
+  }
+  .toggle:before {
+    line-height: 55px;
+  }
+  .menu.active {
+    margin-left: 20%;
+    margin-top: 20%;
+  }
+  .container {
+    position: relative;
+    align-content: center;
+    left: 15%;
+    width: 70%;
+    top: 20%;
+  }
+
+  .mySlides {
+    width: 100%;
+
+  }
+
+  .mySlides img{
+    width: 100%;
+  }
+
+  .pages-cta {
+    padding: 0px 6px;
+  }
+  .footer p {
     bottom: 0;
     margin: 0px;
   }
