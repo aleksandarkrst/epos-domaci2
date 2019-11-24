@@ -1,22 +1,22 @@
 html {
   scroll-behavior: smooth;
 }
-*,
-*::before,
-*::after {
+
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-
 /* Body je imao padding 50 zbog toga je gnjavio sa footerom */
+
 body {
   font: normal 16px/1.5 "Montserrat", sans-serif;
   color: #000;
   /* overflow-x: hidden; */
-  
-}  /* INTRO SECTION
+}
+
+/* INTRO SECTION
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .intro {
@@ -24,7 +24,7 @@ body {
   padding: 100px 0;
 }
 
-.container  {
+.container {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
@@ -145,46 +145,6 @@ h1 {
   transform: scaleX(1);
 }
 
-@media screen and (max-width: 700px) {
-  .menu.active {
-    margin-top: 50px;
-    margin-left: 250px;
-    position: fixed;
-  }
-  .menu ul li a {
-    position: relative;
-    text-decoration: none;
-    color: #fff;
-    font-size: 35px;
-    line-height: 100px;
-    text-shadow: 0px 2px 5px rgba(0, 0, 0, .5);
-  }
-  .toggle:before {
-    line-height: 55px;
-  }
-}
-
-@media screen and (max-width: 570px) {
-  .menu.active {
-    margin-left: 100px;
-    position: fixed;
-    width: auto;
-    height: auto;
-    margin-top: 50px;
-  }
-  .menu ul li a {
-    position: relative;
-    text-decoration: none;
-    color: #fff;
-    font-size: 30px;
-    line-height: 80px;
-    text-shadow: 0px 2px 5px rgba(0, 0, 0, .5);
-  }
-  .toggle:before {
-    line-height: 55px;
-  }
-}
-
 /* TIMELINE
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
@@ -195,7 +155,8 @@ h1 {
 
 .vrednosti .p {
   text-align: center;
-} 
+}
+
 /* Hoces da align tekst bez vrednosti na sredinu */
 
 .timeline ul li {
@@ -205,7 +166,6 @@ h1 {
   margin: 0 auto;
   padding-top: 50px;
   background: rgb(124, 121, 121);
-
 }
 
 .timeline ul li::after {
@@ -218,7 +178,6 @@ h1 {
   height: 30px;
   border-radius: 50%;
   background: inherit;
-  
 }
 
 .timeline ul li div {
@@ -228,7 +187,6 @@ h1 {
   padding: 15px;
   background: #fd3301;
   border-width: 1px;
-  
 }
 
 .timeline ul li div::before {
@@ -238,7 +196,6 @@ h1 {
   width: 0;
   height: 0;
   border-style: solid;
-  
 }
 
 .timeline ul li:nth-child(odd) div {
@@ -268,7 +225,6 @@ time {
   margin-bottom: 8px;
 }
 
-
 /* EFFECTS
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
@@ -292,7 +248,6 @@ time {
 
 .timeline ul li:nth-child(even) div {
   transform: translate3d(-150px, 0, 0);
-  
 }
 
 .timeline ul li.in-view div {
@@ -300,7 +255,6 @@ time {
   visibility: visible;
   opacity: 1;
 }
-
 
 /* GENERAL MEDIA QUERIES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -333,6 +287,7 @@ time {
 }
 
 /* Footer */
+
 .footer {
   background-color: #fd3301;
   margin-top: 0px;
@@ -370,25 +325,38 @@ time {
 }
 
 /* Responsive */
+
 @media (max-width: 850px) {
+  .menu.active {
+    margin-top: 50px;
+    margin-left: 250px;
+    position: fixed;
+  }
+  .menu ul li a {
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    font-size: 35px;
+    line-height: 100px;
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, .5);
+  }
+  .toggle:before {
+    line-height: 55px;
+  }
   .main-header {
     font-size: 10rem;
   }
-
   .main p {
     font-size: 2.5rem;
   }
-
   .content img {
     height: 30%;
     width: 50%;
   }
-
   .content ul {
     float: none;
     text-align: center;
   }
-
   .content ul li {
     position: relative;
     top: 50px;
@@ -398,76 +366,100 @@ time {
     justify-content: center;
     float: none;
   }
-
   .content ul li img {
     position: relative;
     left: 25%;
     margin: 20px;
     text-align: center;
   }
-
   .content ul li .info {
     text-align: center;
     float: none;
     margin: 20px;
     width: 100%;
   }
-
   .content ul li .info a {
     margin-top: 50px;
   }
-
   .list-item .list-item2 {
     float: none;
   }
-
 }
 
-@media (max-width: 600px) {
-
+@media (max-width: 570px) {
+  .menu.active {
+    position: fixed;
+    width: auto;
+    height: auto;
+  }
+  .menu ul li a {
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, .5);
+  }
+  .toggle:before {
+    line-height: 55px;
+  }
   .listen {
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
-
   .btn {
     margin-top: 0px;
   }
-
   .main-header {
     font-size: 5rem;
   }
-
   .footer {
     text-align: center;
     height: 170px;
     margin-top: 20px;
   }
-
+  .content {
+    text-align: center;
+    left: 10%;
+    margin-right: 20px;
+  }
   .call-to-action {
     margin: 100px 30px;
   }
-
   .pages-cta {
     padding-left: 20px;
     padding-right: 30px;
   }
 }
 
-@media screen and (max-width: 370px) {
+@media screen and (max-width: 375px) {
+  .menu.active {
+    top: 10%;
+    position: fixed;
+    width: auto;
+    height: auto;
+  }
+  .menu ul li a {
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, .5);
+  }
+  .toggle:before {
+    line-height: 55px;
+  }
+  .menu.active {
+    margin-left: 15%;
+    margin-top: 5%
+  }
   .main-header {
     font-size: 3rem;
   }
-
   .main p {
     font-size: 1rem;
   }
-  
   .pages-cta {
     padding: 0px 6px;
   }
-
   .footer p {
     position: relative;
     bottom: 0;

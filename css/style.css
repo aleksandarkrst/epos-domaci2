@@ -216,7 +216,7 @@ ul {
   text-align: center;
   margin-top: 60px;
   margin-bottom: 40px;
-  width: 700px;
+  width: 100%;
 }
 
 /* Članci i epizode */
@@ -391,7 +391,7 @@ ul {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 570px) {
   .menu.active {
     position: fixed;
     width: auto;
@@ -440,7 +440,7 @@ ul {
   }
 }
 
-@media screen and (max-width: 370px) {
+@media screen and (max-width: 375px) {
   .menu.active {
     position: fixed;
     width: auto;
