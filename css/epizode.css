@@ -249,7 +249,7 @@ ul {
 }
 
 .Epizode {
-  height: 400px;
+  height: 40%;
   background-color: #fd3301;
   padding: 100px;
   margin-bottom: 100px;
@@ -263,7 +263,8 @@ h3 {
 }
 
 .Naslov h2{
-  color: white;
+  font-size: 4vw;
+  color: grey;
 }
 .Naslov {
   height: 10px;
@@ -332,6 +333,7 @@ h3 {
   text-align: center;
   width: 100%;
   font-size: 50px;
+  color: grey;
 }
 
 .btn {

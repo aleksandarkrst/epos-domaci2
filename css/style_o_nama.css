@@ -10,8 +10,6 @@ html {
 }
 
 
-
-
 /* Body je imao padding 50 zbog toga je gnjavio sa footerom */
 body {
   font: normal 16px/1.5 "Montserrat", sans-serif;
@@ -21,16 +19,11 @@ body {
 }  /* INTRO SECTION
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-/* .intro {
-  background: #fd3301;
-  padding: 2% 0;
-  
-} */
 
 .intro {
-  height: 400px;
+  height: 200px;
   background-color: #fd3301;
-  padding: 100px;
+  padding: 60px;
   margin-bottom: 100px;
   text-align: center;
   z-index: 2;
@@ -40,7 +33,7 @@ body {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
-  text-align: left;
+  text-align: center;
 }
 
 h1 {
