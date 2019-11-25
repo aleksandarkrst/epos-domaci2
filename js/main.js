@@ -6,14 +6,42 @@ $(document).ready(function () {
     });
 });
 
-var myVar;
+$(document).ready(function () {
+    url = 'https://script.google.com/macros/s/AKfycbx8-ZTrNogvWcLMa8Y7zcTFEB5WnzsQHpmcTObK3T2wPyrIDfZr/exec'
+    $("a#inline").fancybox({
+    });
+    $("a.group").fancybox({
+        'transitionIn': 'elastic',
+        'transitionOut': 'elastic',
+        'speedIn': 600,
+        'speedOut': 200,
+        'overlayShow': false
+    });
+    $("#login_form").bind("submit", function () {
 
-function myFunction() {
-    myVar = setTimeout(showPage, 2000);
-}
+        if ($("#login_name").val().length < 1 || $("#login_pass").val().length < 1) {
+            $("#login_error").show();
+            $.fancybox.resize();
+            return false;
+        }
 
-function showPage() {
-    console.log('Radi');
-    $('.load').toggleClass('active');
-    $('.loader').toggleClass('active');
-}
+        $.fancybox.showActivity();
+
+        $.ajax({
+            type: "POST",
+            cache: false,
+            url: url,
+            dataType: "json",
+            data: $(this).serializeArray(),
+            success: function (data) {
+                $.fancybox(data);
+            }
+        });
+
+        return false;
+    });
+});
+
+$(document).ready(function () {
+    $(".fancybox").fancybox();
+});
