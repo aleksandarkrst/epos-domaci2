@@ -466,6 +466,9 @@ ul {
     font-size: 3rem;
     animation: typing 0.8s steps(9, end), blink .5s step-end infinite;
   }
+  .call-to-action {
+    margin: 100px 15px;
+  }
   @keyframes typing {
     from {
       width: 0%
@@ -480,6 +483,7 @@ ul {
   .pages-cta {
     padding: 0px 6px;
   }
+  
   .footer p {
     bottom: 0;
     margin: 0px;
